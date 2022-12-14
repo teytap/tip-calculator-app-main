@@ -24,7 +24,7 @@ p {
 }
 main {
   max-width: 800px;
-  max-height: 600px;
+  min-height: 400px;
   background-color: var(--white);
   border-radius: 20px;
   display: block;
@@ -36,11 +36,23 @@ input {
   background: var(--very-light-grayish-cyan);
   color: var(--very-dark-cyan);
   border: 2px solid var(--very-light-grayish-cyan);
-  border-radius: 4px;
-  display: block;
-  width: 98%;
+  border-radius: 0px 4px 4px 0px;
+  text-align: right;
 }
-input:hover {
+
+label {
+  font-size: 26px;
+  background-color: var(--very-light-grayish-cyan);
+  padding-left: 5px;
+  border-radius: 4px 0px 0px 4px;
+}
+.input-position {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  border-radius: 4px;
+  border: 1px solid var(--very-light-grayish-cyan);
+}
+.input-position:hover {
   border: 2px solid var(--strong-cyan);
   cursor: pointer;
 }
@@ -49,12 +61,7 @@ input:hover {
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.output-column {
-  background-color: var(--very-dark-cyan);
-  color: var(--white);
-  padding: 20px;
-  border-radius: 10px;
-}
+
 .input-column {
   padding: 20px;
 }
@@ -88,9 +95,54 @@ input:hover {
   border: 2px solid var(--very-light-grayish-cyan);
   width: 94%;
 }
+.custom-btn:hover {
+  border: 2px solid var(--strong-cyan);
+  cursor: pointer;
+}
+/*output column style*/
+.output-column {
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  padding: 50px 30px;
+  border-radius: 10px;
+}
+.results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px;
+  gap: 40px;
+  padding: 0;
+  margin-bottom: 70px;
+}
+#reset-btn {
+  width: 100%;
+  background: var(--strong-cyan);
+  padding: 10px;
+  border: 1px solid var(--strong-cyan);
+  border-radius: 4px;
+  font-family: "Space Mono", monospace;
+  font-size: large;
+  letter-spacing: 0.3em;
+  color: var(--very-dark-cyan);
+  opacity: 0.3;
+  margin-top: 40px;
+}
+.tip-output {
+  color: var(--strong-cyan);
+  font-size: 36px;
+}
+.person-text {
+  color: var(--grayish-cyan);
+  font-size: 12px;
+}
+#reset-btn:active {
+  opacity: 1;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 20px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
