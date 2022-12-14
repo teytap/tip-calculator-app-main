@@ -39,24 +39,28 @@
       <div class="container">
         <div class="input-column">
           Bill
-          <div class="input-position">
-            <label for="">$</label> <input type="text" value="" />
-          </div>
+
+          <label for=""></label>
+          <input id="bill-amount" type="text" value="" placeholder="0" />
 
           <p>Select Tip %</p>
           <div class="percentage-btns">
-            <button class="dark-btn btn">5%</button>
-            <button class="dark-btn btn">10%</button>
-            <button class="dark-btn btn">15%</button>
-            <button class="dark-btn btn">25%</button>
-            <button class="dark-btn btn">50%</button>
-            <input type="text" placeholder="Custom" class="btn custom-btn" />
+            <button class="dark-btn btn" id="btn-5">5%</button>
+            <button class="dark-btn btn" id="btn-10">10%</button>
+            <button class="dark-btn btn" id="btn-15">15%</button>
+            <button class="dark-btn btn" id="btn-25">25%</button>
+            <button class="dark-btn btn" id="btn-50">50%</button>
+            <input
+              type="text"
+              placeholder="Custom"
+              class="btn custom-btn"
+              id="btn-custom"
+            />
           </div>
-          Number of People
-          <div class="input-position">
-            <label for=""><i class="fa-solid fa-user"></i></label>
-            <input type="text" placeholder="" value="" />
-          </div>
+          Number of People <span id="message"></span>
+
+          <label for=""></label>
+          <input id="people-number" type="text" placeholder="0" value="" />
         </div>
         <div class="output-column">
           <div class="results">
@@ -64,12 +68,12 @@
               Tip Amount
               <div class="person-text">/ person</div>
             </div>
-            <div class="tip-output">$ 0.00</div>
+            <div class="tip-output" id="tip">$ 0.00</div>
             <div>
               Total
               <div class="person-text">/ person</div>
             </div>
-            <div class="tip-output">$ 0.00</div>
+            <div class="tip-output" id="tip-total">$ 0.00</div>
           </div>
           <button id="reset-btn">RESET</button>
         </div>
@@ -83,5 +87,6 @@
         >. Coded by <a href="#">Mehtap Tataroğlu</a>.
       </div>
     </footer>
+    <script src="App.js"></script>
   </body>
 </html>
