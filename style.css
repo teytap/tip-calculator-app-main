@@ -31,6 +31,15 @@ main {
   margin: 0 auto;
   padding: 20px;
 }
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+/*input*/
+.input-column {
+  padding: 20px;
+}
 input {
   font-size: 28px;
   background: var(--very-light-grayish-cyan);
@@ -46,10 +55,7 @@ input:hover {
   border: 2px solid var(--strong-cyan);
   cursor: pointer;
 }
-input:clicked {
-  border: 2px solid var(--strong-cyan);
-  cursor: pointer;
-}
+
 #bill-amount {
   background-image: url("images/icon-dollar.svg");
   background-repeat: no-repeat;
@@ -60,14 +66,13 @@ input:clicked {
   background-repeat: no-repeat;
   background-position: left 5% bottom 50%;
 }
-.container {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
 
-.input-column {
-  padding: 20px;
+.btn {
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: "Space Mono", monospace;
 }
 .percentage-btns {
   display: grid;
@@ -76,13 +81,6 @@ input:clicked {
   gap: 12px;
   padding: 0;
   margin-bottom: 32px;
-}
-.btn {
-  border: none;
-  border-radius: 4px;
-  font-size: 20px;
-  line-height: 28px;
-  font-family: "Space Mono", monospace;
 }
 .dark-btn {
   background-color: var(--very-dark-cyan);
@@ -100,7 +98,14 @@ input:clicked {
   width: 94%;
   text-align: center;
 }
-
+.person-text {
+  color: var(--grayish-cyan);
+  font-size: 12px;
+}
+#message {
+  color: orange;
+  text-align: right;
+}
 /*output column style*/
 .output-column {
   background-color: var(--very-dark-cyan);
@@ -110,11 +115,17 @@ input:clicked {
 }
 .results {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 50px 50px;
   gap: 20px;
   padding: 0;
   margin-bottom: 70px;
+}
+
+.tip-output {
+  color: var(--strong-cyan);
+  font-size: 36px;
+  text-align: right;
 }
 #reset-btn {
   width: 100%;
@@ -129,20 +140,8 @@ input:clicked {
   opacity: 0.3;
   margin-top: 80px;
 }
-.tip-output {
-  color: var(--strong-cyan);
-  font-size: 36px;
-}
-.person-text {
-  color: var(--grayish-cyan);
-  font-size: 12px;
-}
 #reset-btn:hover {
   opacity: 1;
-}
-#message {
-  color: orange;
-  text-align: right;
 }
 
 .attribution {
@@ -152,4 +151,15 @@ input:clicked {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+@media (max-width: 665px) {
+  h3 {
+    padding: 30px 0px 30px 0px;
+  }
+  #reset-btn {
+    margin-top: 0px;
+  }
+  .results {
+    margin-bottom: 40px;
+  }
 }
