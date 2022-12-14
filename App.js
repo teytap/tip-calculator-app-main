@@ -14,7 +14,6 @@ let percentage;
 function calculateTip() {
   let num = Number(billAmount.value);
   let person = Number(peopleNumber.value);
-
   if (person > 0) {
     tipTotal.innerHTML = `$ ${(num * percentage).toFixed(2)}`;
     tip.innerHTML = `$ ${((num * percentage) / person).toFixed(2)}`;
@@ -55,4 +54,6 @@ btnCustom.addEventListener("click", function () {
 resetBtn.addEventListener("click", function () {
   tipTotal.innerHTML = "$ 0.00";
   tip.innerHTML = "$ 0.00";
+  billAmount.value = "";
+  peopleNumber.value = "";
 });

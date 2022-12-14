@@ -18,11 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
       rel="stylesheet"
     />
-    <!-- fontawesome-->
-    <script
-      src="https://kit.fontawesome.com/ddac49f148.js"
-      crossorigin="anonymous"
-    ></script>
+
     <title>Frontend Mentor | Tip calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -39,10 +35,10 @@
       <div class="container">
         <div class="input-column">
           Bill
-
-          <label for=""></label>
-          <input id="bill-amount" type="text" value="" placeholder="0" />
-
+          <form action="">
+            <label for=""></label>
+            <input id="bill-amount" type="text" value="" placeholder="0" />
+          </form>
           <p>Select Tip %</p>
           <div class="percentage-btns">
             <button class="dark-btn btn" id="btn-5">5%</button>
@@ -50,6 +46,7 @@
             <button class="dark-btn btn" id="btn-15">15%</button>
             <button class="dark-btn btn" id="btn-25">25%</button>
             <button class="dark-btn btn" id="btn-50">50%</button>
+
             <input
               type="text"
               placeholder="Custom"
@@ -58,9 +55,10 @@
             />
           </div>
           Number of People <span id="message"></span>
-
-          <label for=""></label>
-          <input id="people-number" type="text" placeholder="0" value="" />
+          <form action="">
+            <label for=""></label>
+            <input id="people-number" type="text" placeholder="0" value="" />
+          </form>
         </div>
         <div class="output-column">
           <div class="results">
