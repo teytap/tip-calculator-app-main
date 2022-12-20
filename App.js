@@ -15,7 +15,7 @@ function calculateTip() {
   let num = Number(billAmount.value);
   let person = Number(peopleNumber.value);
   if (person > 0) {
-    tipTotal.innerHTML = `$ ${(num / person).toFixed(2)}`;
+    tipTotal.innerHTML = `$ ${((num + num * percentage) / person).toFixed(2)}`;
     tip.innerHTML = `$ ${((num * percentage) / person).toFixed(2)}`;
     peopleNumber.style.border = "2px solid var(--very-light-grayish-cyan)";
     message.innerHTML = "";
